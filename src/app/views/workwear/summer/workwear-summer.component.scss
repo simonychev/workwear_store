@@ -1,0 +1,21 @@
+.workwear-summer {
+  padding: 40px 0;
+
+  .container {
+
+    h1 {
+      text-align: center;
+      font-family: OpenSans, sans-serif;
+      font-weight: 500;
+      font-size: 36px;
+      margin-bottom: 40px;
+    }
+
+    .workwear-summer-items {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      column-gap: 20px;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+<div class="catalog-item" routerLink="{{catalog.link}}" (click)="openDetail(catalog.title, catalog.id)">
+  <div class="catalog-item-image">
+    <img src="/assets/images/products/{{catalog.image}}" alt="{{catalog.title}}">
+  </div>
+  <div class="catalog-item-title">
+    {{catalog.title}}
+  </div>
+  <div class="catalog-item-price">
+    {{catalog.price}}
+  </div>
+  <a class="catalog-item-button">
+    <button class="button" (click)="openDetail(catalog.title, catalog.id)">Подробнее</button>
+  </a>
+</div>

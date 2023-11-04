@@ -1,0 +1,77 @@
+@import "../../../../assets/styles/variables";
+
+.detail {
+  padding: 40px 0;
+
+  .container {
+
+    .detail-content {
+      display: flex;
+      //justify-content: space-between;
+
+      .detail-content-image {
+        margin-right: 20px;
+
+        img {
+          max-width: 400px;
+        }
+      }
+
+      .detail-content-text {
+        font-family: Roboto, sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        color: $black-text-color;
+
+        .detail-content-text-title {
+          font-family: OpenSans, sans-serif;
+          font-weight: 700;
+          font-size: 24px;
+          margin-bottom: 20px;
+        }
+
+        .detail-content-text-price {
+          font-size: 22px;
+          margin-bottom: 40px;
+
+          span {
+            font-weight: 500;
+            color: $orange-color;
+          }
+        }
+
+        .detail-content-text-description {
+          margin-bottom: 20px;
+
+          span {
+            font-size: 24px;
+            font-weight: 500;
+            border-bottom: 1px solid $black-text-color;
+
+          }
+
+          .content-text-description {
+            margin-top: 20px;
+
+            h3 {
+              font-size: 18px !important;
+            }
+          }
+        }
+
+        .detail-content-text-material {
+          span {
+            font-size: 24px;
+            font-weight: 500;
+            margin-bottom: 10px;
+            border-bottom: 1px solid $black-text-color;
+          }
+
+          .content-text-material {
+            margin-top: 20px;
+          }
+        }
+      }
+    }
+  }
+}

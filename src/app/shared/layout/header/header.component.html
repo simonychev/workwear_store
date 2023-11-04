@@ -1,0 +1,229 @@
+<nav class="header-menu">
+  <div class="container">
+    <a [matMenuTriggerFor]="menu">
+      <div class="header-menu-burger">
+        <div class="burger-item"></div>
+        <div class="burger-item"></div>
+        <div class="burger-item"></div>
+      </div>
+    </a>
+    <mat-menu #menu="matMenu">
+      <ul>
+        <li>
+          <a routerLink="/">Главная</a>
+        </li>
+        <li>
+          <a routerLink="/" fragment="about">О компании</a>
+        </li>
+        <li class="products">
+          <a routerLink="/" fragment="catalog">Продукция</a>
+        </li>
+        <li>
+          <a routerLink="/" fragment="reviews">Отзывы о нас</a>
+        </li>
+        <li>
+          <a routerLink="/contact">Контакты</a>
+        </li>
+      </ul>
+    </mat-menu>
+    <div class="header-menu-actions">
+      <div class="header-head-action address">
+        <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" width="16px" height="16px"
+             viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve" fill="#F36009"><g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+          <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+          <g id="SVGRepo_iconCarrier"> <path fill="#F36009" d="M32,0C18.746,0,8,10.746,8,24c0,5.219,1.711,10.008,4.555,13.93c0.051,0.094,0.059,0.199,0.117,0.289l16,24 C29.414,63.332,30.664,64,32,64s2.586-0.668,3.328-1.781l16-24c0.059-0.09,0.066-0.195,0.117-0.289C54.289,34.008,56,29.219,56,24 C56,10.746,45.254,0,32,0z M32,32c-4.418,0-8-3.582-8-8s3.582-8,8-8s8,3.582,8,8S36.418,32,32,32z"></path> </g></svg>
+        <div class="header-head-text">
+          <div class="header-head-text-description">
+            <div class="text-description-top">г. Нижний Новгород,</div>
+            <div>ул. Бориса Видяева, д.24</div>
+          </div>
+        </div>
+      </div>
+      <div class="header-head-action phone">
+        <svg fill="#F36009" width="16px" height="16px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+             stroke="#F36009">
+          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+          <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+          <g id="SVGRepo_iconCarrier">
+            <path
+              d="M21.384,17.752a2.108,2.108,0,0,1-.522,3.359,7.543,7.543,0,0,1-5.476.642C10.5,20.523,3.477,13.5,2.247,8.614a7.543,7.543,0,0,1,.642-5.476,2.108,2.108,0,0,1,3.359-.522L8.333,4.7a2.094,2.094,0,0,1,.445,2.328A3.877,3.877,0,0,1,8,8.2c-2.384,2.384,5.417,10.185,7.8,7.8a3.877,3.877,0,0,1,1.173-.781,2.092,2.092,0,0,1,2.328.445Z"></path>
+          </g>
+        </svg>
+        <div class="header-head-text">
+          <div class="header-head-text-description">
+            <a class="text-description-top" href="tel:+78002015247">8 (800) 201 52 47</a>
+            <span>Бесплатный звонок по РФ</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <ul class="menu">
+      <li>
+        <a routerLink="/">Главная</a>
+      </li>
+      <li>
+        <a routerLink="/" fragment="about">О компании</a>
+      </li>
+      <li class="products">
+        <a href="/">Продукция
+          <svg width="15px" height="15px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+               stroke="#FFF">
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+            <g id="SVGRepo_iconCarrier">
+              <path
+                d="M5.70711 9.71069C5.31658 10.1012 5.31658 10.7344 5.70711 11.1249L10.5993 16.0123C11.3805 16.7927 12.6463 16.7924 13.4271 16.0117L18.3174 11.1213C18.708 10.7308 18.708 10.0976 18.3174 9.70708C17.9269 9.31655 17.2937 9.31655 16.9032 9.70708L12.7176 13.8927C12.3271 14.2833 11.6939 14.2832 11.3034 13.8927L7.12132 9.71069C6.7308 9.32016 6.09763 9.32016 5.70711 9.71069Z"
+                fill="#FFF"></path>
+            </g>
+          </svg>
+        </a>
+        <div class="products-items">
+          <div class="products-item" *ngFor="let product of products">
+            <ul>
+              <li>
+                <a routerLink="{{product.link}}">
+                  {{product.title}}
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </li>
+      <li>
+        <a routerLink="/" fragment="reviews">Отзывы о нас</a>
+      </li>
+      <li>
+        <a routerLink="/contact">Контакты</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<header class="header">
+  <div class="container">
+    <div class="header-head">
+      <div class="header-head-logo">
+        <div class="header-head-logo-image">
+          <img src="/assets/images/logo.webp" alt="logo" routerLink="/">
+        </div>
+        <div class="header-head-logo-text">
+          <span class="text-head">Защита труда</span>
+          <br><span>OOO "Талисман"</span> <br> производство и продажа спецодежды, СИЗ, нанесение логотипа
+        </div>
+      </div>
+      <div class="header-head-actions">
+        <div class="header-head-action address">
+          <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" width="24px" height="24px"
+               viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve" fill="#F36009"><g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+            <g id="SVGRepo_iconCarrier"> <path fill="#F36009" d="M32,0C18.746,0,8,10.746,8,24c0,5.219,1.711,10.008,4.555,13.93c0.051,0.094,0.059,0.199,0.117,0.289l16,24 C29.414,63.332,30.664,64,32,64s2.586-0.668,3.328-1.781l16-24c0.059-0.09,0.066-0.195,0.117-0.289C54.289,34.008,56,29.219,56,24 C56,10.746,45.254,0,32,0z M32,32c-4.418,0-8-3.582-8-8s3.582-8,8-8s8,3.582,8,8S36.418,32,32,32z"></path> </g></svg>
+          <div class="header-head-text">
+            <div class="header-head-text-title">
+              Адрес
+            </div>
+            <div class="header-head-text-description">
+              <div class="text-description-top">г. Нижний Новгород,</div>
+              <div>ул. Бориса Видяева, д.24</div>
+            </div>
+          </div>
+        </div>
+        <div class="header-head-action phone">
+          <svg fill="#F36009" width="24px" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+               stroke="#F36009">
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+            <g id="SVGRepo_iconCarrier">
+              <path
+                d="M21.384,17.752a2.108,2.108,0,0,1-.522,3.359,7.543,7.543,0,0,1-5.476.642C10.5,20.523,3.477,13.5,2.247,8.614a7.543,7.543,0,0,1,.642-5.476,2.108,2.108,0,0,1,3.359-.522L8.333,4.7a2.094,2.094,0,0,1,.445,2.328A3.877,3.877,0,0,1,8,8.2c-2.384,2.384,5.417,10.185,7.8,7.8a3.877,3.877,0,0,1,1.173-.781,2.092,2.092,0,0,1,2.328.445Z"></path>
+            </g>
+          </svg>
+          <div class="header-head-text">
+            <div class="header-head-text-title">
+              Телефон
+            </div>
+            <div class="header-head-text-description">
+              <a class="text-description-top" href="tel:+78002015247">8 (800) 201 52 47</a>
+              <span>Бесплатный звонок по РФ</span>
+            </div>
+          </div>
+        </div>
+        <div class="header-button">
+          <button class="button" (click)="openPopup()">Обратный звонок</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<ng-template #popup>
+  <div class="popup" [formGroup]="popupForm">
+    <div class="popup-head">
+      Оставить заявку
+      <svg (click)="closePopup()" width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+        <g id="SVGRepo_iconCarrier">
+          <g id="Menu / Close_SM">
+            <path id="Vector" d="M16 16L12 12M12 12L8 8M12 12L16 8M12 12L8 16" stroke="#6C757D" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round"></path>
+          </g>
+        </g>
+      </svg>
+    </div>
+    <div class="popup-form">
+      <div class="popup-form-item">
+        <div class="popup-form-title">Введите имя</div>
+        <div class="popup-form-input">
+          <input type="text" placeholder="Как к вам обращаться"
+          [ngStyle]="{'border-color': popupForm.get('name')?.invalid && (popupForm.get('name')?.dirty || popupForm.get('name')?.touched) ? 'red' : ''}"
+          formControlName="name">
+          <div *ngIf="popupForm.get('name')?.invalid && (popupForm.get('name')?.dirty || popupForm.get('name')?.touched)">
+            <div class="text-danger" *ngIf="popupForm.get('name')?.errors?.['pattern']">
+              Имя начинается с большой буквы
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popup-form-item">
+        <div class="popup-form-title">Введите E-mail</div>
+        <div class="popup-form-input">
+          <input type="text" placeholder="Контактный E-mail"
+                 [ngStyle]="{'border-color': popupForm.get('email')?.invalid
+                 && (popupForm.get('email')?.dirty || popupForm.get('email')?.touched) ? 'red' : ''}"
+                formControlName="email">
+          <div *ngIf="popupForm.get('email')?.invalid && (popupForm.get('email')?.dirty || popupForm.get('email')?.touched)">
+            <div class="text-danger" *ngIf="popupForm.get('email')?.errors?.['pattern'] || popupForm.get('email')?.errors?.['required']">
+              Введите корректный email
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popup-form-item">
+        <div class="popup-form-title">Введите телефон</div>
+        <div class="popup-form-input">
+          <input type="number" placeholder="Контактный телефон"
+                 [ngStyle]="{'border-color': popupForm.get('phone')?.invalid
+                 && (popupForm.get('phone')?.dirty || popupForm.get('phone')?.touched) ? 'red' : ''}"
+                formControlName="phone">
+          <div *ngIf="popupForm.get('phone')?.invalid && (popupForm.get('phone')?.dirty || popupForm.get('phone')?.touched)">
+            <div class="text-danger" *ngIf="popupForm.get('phone')?.errors?.['pattern']">
+              Введите номер в формате: +79008883355
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popup-form-item">
+        <div class="popup-form-title">Комментарий</div>
+        <div class="popup-form-input">
+          <textarea cols="50" rows="5" formControlName="comment"></textarea>
+        </div>
+      </div>
+      <div class="popup-form-description">
+        Отправляя данную форму, вы даете свое согласие на обработку персональных данных, в соответствии с Федеральным
+        законом от 27.07.2006 года №152-ФЗ "О персональных данных", на условиях и для целей, определенных <a>Политикой
+        конфиденциальности</a>
+      </div>
+      <button class="button" [disabled]="popupForm.invalid" (click)="getMail()">Отправить</button>
+    </div>
+  </div>
+</ng-template>

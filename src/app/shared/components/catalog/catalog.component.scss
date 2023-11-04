@@ -1,0 +1,45 @@
+.catalog-item {
+  text-align: center;
+  width: 250px;
+  border-radius: 5px;
+  border: 1px solid #E5E5E5;
+  box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
+  cursor: pointer;
+  margin-bottom: 30px;
+
+  &:hover {
+    transform: scale(1.01);
+  }
+
+  .catalog-item-image img {
+    width: 250px;
+    height: 250px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    margin-bottom: 15px;
+    object-fit: contain;
+    object-position: center;
+  }
+
+  .catalog-item-title {
+    font-family: OpenSans, sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    color: #333333;
+    margin-bottom: 10px;
+    padding: 0 10px;
+    min-height: 60px;
+  }
+
+  .catalog-item-price {
+    font-family: Roboto, sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  .catalog-item-button {
+    margin-bottom: 20px;
+    display: block;
+  }
+}

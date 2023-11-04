@@ -1,0 +1,16 @@
+<section class="inventory">
+  <div class="container">
+    <div class="main-head">
+      <span routerLink="/">Главная</span> / Хозинвентарь
+    </div>
+    <h1>Хозинвентарь</h1>
+    <div class="inventory-items">
+      <catalog *ngFor="let workwear of inventory[page].content" [catalog]="workwear"></catalog>
+    </div>
+    <div class="pages" *ngIf="page > 1">
+      <a class="page" (click)="openPage(page)"
+         [class.active]="this.activeParams ? this.activeParams === page : (page === 1)"
+         *ngFor="let page of pages">{{page}}</a>
+    </div>
+  </div>
+</section>

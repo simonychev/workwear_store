@@ -1,0 +1,11 @@
+<section class="shoes">
+  <div class="container">
+    <div class="main-head">
+      <span routerLink="/">Главная</span> / Спецобувь
+    </div>
+    <h1>Спецобувь</h1>
+    <div class="shoes-items">
+      <catalog *ngFor="let workwear of workwears" [catalog]="workwear"></catalog>
+    </div>
+  </div>
+</section>

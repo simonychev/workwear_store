@@ -1,0 +1,19 @@
+@import "../../../assets/styles/mixins";
+
+.workwear {
+  padding: 40px 0;
+
+  .container {
+
+    h1 {
+      @include text-title;
+    }
+
+    .workwear-items {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      column-gap: 20px;
+    }
+  }
+}

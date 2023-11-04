@@ -1,0 +1,143 @@
+<footer class="footer">
+  <section class="map" id="contact">
+    <div class="imageMap"></div>
+    <div class="container">
+      <div class="map-window" [formGroup]="footerForm">
+        <div class="map-window-title">
+          Обратный звонок
+        </div>
+        <div class="map-window-description">
+          Отправьте заявку и мы перезвоним в течении 30 мин
+        </div>
+        <div class="map-inputs">
+          <div class="map-input">
+            <input type="text" placeholder="* Имя:"
+          formControlName="names">
+          <div *ngIf="footerForm.get('names')?.invalid">
+            <div class="text-danger" *ngIf="footerForm.get('names')?.errors?.['pattern']">
+              Имя начинается с большой буквы
+            </div>
+          </div>
+          </div>
+          <div class="map-input">
+            <input type="number" placeholder="* Телефон:"
+                formControlName="phones">
+          <div *ngIf="footerForm.get('phones')?.invalid">
+            <div class="text-danger" *ngIf="footerForm.get('phones')?.errors?.['pattern']">
+              Введите номер в формате: +79008883355
+            </div>
+          </div>
+          </div>
+          <div class="map-agree-text">
+            Отправляя данную форму, вы соглашаетесь c <a>Политикой конфиденциальности</a>
+          </div>
+          <button class="button" [disabled]="footerForm.invalid" (click)="getMailFooter()">Отправить</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="container">
+    <div class="footer-actions">
+      <div class="footer-action">
+        <div class="footer-action-icon">
+          <svg fill="#F36009" width="50px" height="50px" viewBox="0 0 32 32" version="1.1"
+               xmlns="http://www.w3.org/2000/svg">
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+            <g id="SVGRepo_iconCarrier"><title>phone</title>
+              <path d="M21.999 4h-12c-1.104 0-1.999 0.896-1.999 2v20c0 1.104 0.895 2 1.999 2h12c1.105 0 2.001-0.896 2.001-2v-20c0-1.104-0.896-2-2.001-2zM13 5h5l0.062 1h-5.062v-1zM15.979 26.5c-0.552 0-1-0.447-1-1s0.448-1 1-1c0.553 0 1 0.447 1 1s-0.448 1-1 1zM21.999 23h-12l0.021-16h11.979v16z"></path>
+            </g>
+          </svg>
+        </div>
+        <div class="footer-action-title">
+          Телефон
+        </div>
+        <div class="footer-action-description">
+          <a class="text-description-top" href="tel:+78002015247">+7 (800) 201 52 47</a>
+          <a class="text-description-top" href="tel:+79307144749">+7 (930) 714 47 49</a>
+          <a href="tel:+79087326769">+7 (908) 732 67 69</a>
+        </div>
+      </div>
+      <div class="footer-action">
+        <div class="footer-action-icon">
+          <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+               width="50px" height="50px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve"
+               fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+            <g id="SVGRepo_iconCarrier">
+            <path fill="#F36009" d="M32,0C18.746,0,8,10.746,8,24c0,5.219,1.711,10.008,4.555,13.93c0.051,0.094,0.059,0.199,0.117,0.289l16,24 C29.414,63.332,30.664,64,32,64s2.586-0.668,3.328-1.781l16-24c0.059-0.09,0.066-0.195,0.117-0.289C54.289,34.008,56,29.219,56,24 C56,10.746,45.254,0,32,0z M32,32c-4.418,0-8-3.582-8-8s3.582-8,8-8s8,3.582,8,8S36.418,32,32,32z"></path> </g></svg>
+        </div>
+        <div class="footer-action-title">
+          Адрес
+        </div>
+        <div class="footer-action-description">
+          <div class="text-description-top">г. Нижний Новгород,</div>
+          <div>ул. Бориса Видяева, д.24</div>
+        </div>
+      </div>
+      <div class="footer-action">
+        <div class="footer-action-icon">
+          <svg width="50px" height="50px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+            <g id="SVGRepo_iconCarrier">
+              <path
+                d="M3 8L8.44992 11.6333C9.73295 12.4886 10.3745 12.9163 11.0678 13.0825C11.6806 13.2293 12.3194 13.2293 12.9322 13.0825C13.6255 12.9163 14.2671 12.4886 15.5501 11.6333L21 8M6.2 19H17.8C18.9201 19 19.4802 19 19.908 18.782C20.2843 18.5903 20.5903 18.2843 20.782 17.908C21 17.4802 21 16.9201 21 15.8V8.2C21 7.0799 21 6.51984 20.782 6.09202C20.5903 5.71569 20.2843 5.40973 19.908 5.21799C19.4802 5 18.9201 5 17.8 5H6.2C5.0799 5 4.51984 5 4.09202 5.21799C3.71569 5.40973 3.40973 5.71569 3.21799 6.09202C3 6.51984 3 7.07989 3 8.2V15.8C3 16.9201 3 17.4802 3.21799 17.908C3.40973 18.2843 3.71569 18.5903 4.09202 18.782C4.51984 19 5.07989 19 6.2 19Z"
+                stroke="#F36009" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            </g>
+          </svg>
+        </div>
+        <div class="footer-action-title">
+          E-mail
+        </div>
+        <div class="footer-action-description">
+          <a href="mailto:talismanmaria@yandex.ru">talismanmaria@yandex.ru</a>
+        </div>
+      </div>
+      <div class="footer-action">
+        <div class="footer-action-icon">
+          <svg width="50px" height="50px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="#F36009">
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+            <g id="SVGRepo_iconCarrier">
+              <path d="M0 0h48v48H0z" fill="none"></path>
+              <g id="Shopicon">
+                <path
+                  d="M24,4C12.954,4,4,12.954,4,24s8.954,20,20,20s20-8.954,20-20S35.046,4,24,4z M24,40c-8.822,0-16-7.178-16-16S15.178,8,24,8 s16,7.178,16,16S32.822,40,24,40z"></path>
+                <polygon points="26,14 22,14 22,26 34,26 34,22 26,22 "></polygon>
+              </g>
+            </g>
+          </svg>
+        </div>
+        <div class="footer-action-title">
+          Режим работы
+        </div>
+        <div class="footer-action-description">
+          <div>Пн-Пт с 09:00 до 17:00</div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="footer-copyright-text">
+        Защита труда ООО "Талисман" © 2023г.
+      </div>
+      <div class="footer-copyright-icon">
+        <a href="https://vk.com/specodezhda1">
+          <svg fill="#CCC" width="20px" height="20px" viewBox="-2.5 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" stroke="#CCC"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>vk</title> <path d="M16.563 15.75c-0.5-0.188-0.5-0.906-0.531-1.406-0.125-1.781 0.5-4.5-0.25-5.656-0.531-0.688-3.094-0.625-4.656-0.531-0.438 0.063-0.969 0.156-1.344 0.344s-0.75 0.5-0.75 0.781c0 0.406 0.938 0.344 1.281 0.875 0.375 0.563 0.375 1.781 0.375 2.781 0 1.156-0.188 2.688-0.656 2.75-0.719 0.031-1.125-0.688-1.5-1.219-0.75-1.031-1.5-2.313-2.063-3.563-0.281-0.656-0.438-1.375-0.844-1.656-0.625-0.438-1.75-0.469-2.844-0.438-1 0.031-2.438-0.094-2.719 0.5-0.219 0.656 0.25 1.281 0.5 1.813 1.281 2.781 2.656 5.219 4.344 7.531 1.563 2.156 3.031 3.875 5.906 4.781 0.813 0.25 4.375 0.969 5.094 0 0.25-0.375 0.188-1.219 0.313-1.844s0.281-1.25 0.875-1.281c0.5-0.031 0.781 0.406 1.094 0.719 0.344 0.344 0.625 0.625 0.875 0.938 0.594 0.594 1.219 1.406 1.969 1.719 1.031 0.438 2.625 0.313 4.125 0.25 1.219-0.031 2.094-0.281 2.188-1 0.063-0.563-0.563-1.375-0.938-1.844-0.938-1.156-1.375-1.5-2.438-2.563-0.469-0.469-1.063-0.969-1.063-1.531-0.031-0.344 0.25-0.656 0.5-1 1.094-1.625 2.188-2.781 3.188-4.469 0.281-0.5 0.938-1.656 0.688-2.219-0.281-0.625-1.844-0.438-2.813-0.438-1.25 0-2.875-0.094-3.188 0.156-0.594 0.406-0.844 1.063-1.125 1.688-0.625 1.438-1.469 2.906-2.344 4-0.313 0.375-0.906 1.156-1.25 1.031z"></path> </g></svg>
+        </a>
+        <a href="https://invite.viber.com/?g2=AQAsBTilpy7UnUzh9NpvvJAaNIkGZ%2B%2FEjOZ6M%2BJBrWRcOi8YIm5ckdnZl94gzzSg">
+          <svg fill="#CCC" height="20px" width="20px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 504 504" xml:space="preserve" stroke="#CCC"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M377.6,0H126C56.8,0,0,56.8,0,126.4V378c0,69.2,56.8,126,126,126h251.6c69.6,0,126.4-56.8,126.4-126.4V126.4 C504,56.8,447.2,0,377.6,0z M238.4,103.6c0.8-12.4,12.4-8,18.4-8.8c75.2,2.4,140,70,139.2,142.8c0,7.2,2.4,17.6-8.4,17.6 c-10.4,0-7.6-10.8-8.8-18c-10-77.2-46-113.6-124.4-125.6C248,110.8,238,112,238.4,103.6z M350.8,240.8c-12,1.6-9.6-8.8-10.8-15.6 c-8-47.2-24.8-64.4-73.2-74.8c-7.2-1.6-18.4-0.4-16.4-11.2c1.6-10.4,11.6-6.8,19.2-6c48.4,5.6,88,46.8,87.6,92 C356.4,230,359.6,239.2,350.8,240.8z M320.8,216c0,6.4-0.8,12.4-8,13.2c-5.2,0.8-8.4-3.6-9.2-8.8c-2-19.2-12.4-30.8-32.4-34 c-6-0.8-11.6-2.8-8.8-10.8c2-5.2,6.8-6,12-6C296,169.2,320.8,194.4,320.8,216z M396.8,363.6c-8.4,22.8-36.8,46-61.2,45.6 c-3.6-0.8-10.4-2-16.4-4.4C212,359.6,134,285.2,90,178.8c-14.8-35.6,0.8-66,38-78c6.8-2.4,13.2-2.4,20,0 c16,5.6,56.4,60.4,57.2,76.4c0.8,12.4-8,19.2-16.4,24.8c-16.4,10.8-16.4,24.4-9.2,40c15.6,34.4,42.4,58.4,77.2,73.6 c12.4,5.6,24.8,5.2,33.2-7.6c15.2-22.8,34-21.6,54.4-7.6c10.4,7.2,20.8,14,30.4,21.6C388,332.8,404.8,341.6,396.8,363.6z"></path> </g> </g> </g></svg>
+        </a>
+        <a href="https://www.avito.ru/nizhniy_novgorod/odezhda_obuv_aksessuary/spetsodezhda_perchatki_logotip_siz_vetosh_2891552612?utm_campaign=native&utm_medium=item_page_android&utm_source=soc_sharing_seller">
+          <svg width="20px" height="20px" viewBox="0 0 192 192" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" fill="none" stroke="#CCC"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g style="stroke-width:8.63157;stroke-dasharray:none"> <path fill="#04e061" d="M61.924 172.07c26.468 0 47.924-21.456 47.924-47.924S88.392 76.222 61.924 76.222 14 97.678 14 124.146s21.456 47.925 47.924 47.925z" style="fill:none;fill-opacity:1;stroke:#CCC;stroke-width:8.63157;stroke-dasharray:none;stroke-opacity:1" transform="translate(7.024 7.024) scale(.92683)"></path> <path fill="#ff4053" d="M149.044 166.007c15.992 0 28.956-12.963 28.956-28.955 0-15.992-12.964-28.955-28.956-28.955-15.99 0-28.954 12.963-28.954 28.955 0 15.992 12.963 28.955 28.954 28.955z" style="fill:none;fill-opacity:1;stroke:#CCC;stroke-width:8.63157;stroke-dasharray:none;stroke-opacity:1" transform="translate(7.024 7.024) scale(.92683)"></path> <path fill="#965eeb" d="M71.086 65.979c9.898 0 17.922-8.024 17.922-17.921 0-9.898-8.024-17.922-17.922-17.922-9.898 0-17.921 8.024-17.921 17.922 0 9.897 8.023 17.921 17.921 17.921z" style="fill:none;fill-opacity:1;stroke:#CCC;stroke-width:8.63157;stroke-dasharray:none;stroke-opacity:1" transform="translate(7.024 7.024) scale(.92683)"></path> <path fill="#0af" d="M137.789 97.856c21.519 0 38.964-17.444 38.964-38.963 0-21.52-17.445-38.964-38.964-38.964-21.52 0-38.964 17.445-38.964 38.964s17.445 38.963 38.964 38.963z" style="fill:none;fill-opacity:1;stroke:#CCC;stroke-width:8.63157;stroke-dasharray:none;stroke-opacity:1" transform="translate(7.024 7.024) scale(.92683)"></path> </g> </g></svg>
+        </a>
+        <a href="https://2gis.ru/n_novgorod/geo/70000001074380095">
+          <svg fill="#CCC" height="20px" width="20px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" stroke="#CCC"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M416,357.808H285.784c9.936-22.672,21.048-50.4,28.456-75.992c47.68-22.168,80.832-70.544,80.832-126.824 C395.08,77.792,332.808,15.2,256,15.2S116.92,77.792,116.92,155c0,56.272,33.144,104.648,80.824,126.816 c7.4,25.6,18.52,53.32,28.456,75.992H96L0,496.8h512L416,357.808z M209.784,155c0-25.656,20.688-46.456,46.216-46.456 s46.216,20.8,46.216,46.456S281.528,201.456,256,201.456S209.784,180.656,209.784,155z M60.992,464.8l51.792-74.992h5.088 l-0.096,0.144L223.56,464.8H60.992z M172.984,389.808h67.928c3.368,7.016,5.888,12.032,6.936,14.088L256,420.048l8.2-16.152 c1.04-2.072,3.544-7.088,6.904-14.088h68.904L257.88,449.88L172.984,389.808z M394.208,389.808h5l51.8,74.992h-159.32 L394.208,389.808z"></path> </g> </g> </g></svg>
+        </a>
+        <a href="https://yandex.ru/profile/28349134271">
+          <svg width="20px" height="20px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M21.88,2h-4c-4,0-8.07,3-8.07,9.62a8.33,8.33,0,0,0,4.14,7.66L9,28.13A1.25,1.25,0,0,0,9,29.4a1.21,1.21,0,0,0,1,.6h2.49a1.24,1.24,0,0,0,1.2-.75l4.59-9h.34v8.62A1.14,1.14,0,0,0,19.82,30H22a1.12,1.12,0,0,0,1.16-1.06V3.22A1.19,1.19,0,0,0,22,2ZM18.7,16.28h-.59c-2.3,0-3.66-1.87-3.66-5,0-3.9,1.73-5.29,3.34-5.29h.94Z" style="fill:#CCC"></path></g></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>

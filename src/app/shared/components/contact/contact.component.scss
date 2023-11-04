@@ -1,0 +1,66 @@
+@import "../../../../assets/styles/variables";
+
+.contact {
+  padding: 40px 0;
+
+  .container {
+
+    .contact-head {
+      font-family: Roboto, sans-serif;
+      font-weight: 400;
+      font-size: 18px;
+      color: #6c757d;
+      margin-bottom: 40px;
+
+      span {
+        cursor: pointer;
+        color: $orange-color;
+      }
+    }
+
+    .contact-title {
+      font-family: OpenSans, sans-serif;
+      font-weight: 500;
+      font-size: 32px;
+      color: #333333;
+      margin-bottom: 40px;
+    }
+
+    .contact-item {
+      font-family: Roboto, sans-serif;
+      font-weight: 500;
+      color: #222222;
+      margin-bottom: 30px;
+
+      .contact-item-title {
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+
+      .contact-item-description {
+        font-size: 18px;
+        font-weight: 400;
+
+        a {
+          text-decoration: none;
+          display: block;
+          margin-bottom: 10px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+
+        table {
+          border-collapse: collapse;
+          border: 3px solid grey;
+
+          td, tr {
+            border: 1px solid grey;
+            padding: 5px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,122 @@
+<section class="main">
+  <div class="container">
+    <div class="banner-carousel">
+      <owl-carousel-o [options]="customOptions" #owlCar>
+        <ng-template carouselSlide *ngFor="let banner of banners">
+          <div class="main-image">
+            <img src="assets/images/banner/{{banner.image}}" alt="banner">
+          </div>
+        </ng-template>
+      </owl-carousel-o>
+      <div class="banner-arrows">
+        <a class="move-backward" (click)="owlCar.prev()">
+          <svg width="24" height="24" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M10.5551 15C10.4003 15 10.2455 14.9435 10.1233 14.8224L4.81172 9.55746C3.94818 8.70151 3.94818 7.29647 4.81172 6.44052L10.1233 1.17563C10.3596 0.941456 10.7506 0.941456 10.9869 1.17563C11.2231 1.40981 11.2231 1.7974 10.9869 2.03158L5.67526 7.29647C5.28423 7.68407 5.28423 8.31392 5.67526 8.70151L10.9869 13.9664C11.2231 14.2006 11.2231 14.5882 10.9869 14.8224C10.8647 14.9354 10.7099 15 10.5551 15Z"
+              fill="#FFFFFF"/>
+          </svg>
+        </a>
+        <a class="move-forward" (click)="owlCar.next()">
+          <svg width="24" height="24" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M5.44392 1C5.59871 1 5.75349 1.05652 5.87569 1.17765L11.1873 6.44254C12.0508 7.29849 12.0508 8.70353 11.1873 9.55948L5.87569 14.8244C5.63944 15.0585 5.2484 15.0585 5.01215 14.8244C4.7759 14.5902 4.7759 14.2026 5.01215 13.9684L10.3238 8.70353C10.7148 8.31593 10.7148 7.68608 10.3238 7.29849L5.01215 2.0336C4.7759 1.79942 4.7759 1.41182 5.01215 1.17765C5.13435 1.0646 5.28914 1 5.44392 1Z"
+              fill="#FFFFFF"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="catalog" id="catalog">
+  <div class="container">
+    <div class="catalog-title">
+      Мы предлагаем
+    </div>
+    <div class="catalog-items">
+      <catalog *ngFor="let catalog of catalogs" [catalog]="catalog"></catalog>
+    </div>
+    <div class="catalog-info">
+      <span>УВАЖАЕМЫЕ ПОКУПАТЕЛИ!</span> Работы по корректировке цен ведутся непрерывно, в связи с чем убедительно просим Вас, уточнять цены на продукцию.
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="container">
+    <div class="about-title">
+      О компании
+    </div>
+    <div class="about-block">
+      <div class="about-image">
+        <img src="assets/images/about.webp" alt="about">
+      </div>
+      <div class="about-text">
+        ООО "Талисман" построено на идеально сбалансированных показателях хорошего качества, стиля, новизны и цены.
+        <br>Рекомендуем современный и рациональный подход к уменьшению закупочных расходов и максимизации рентабельности
+        инвестиций наших клиентов в профилактику и предупреждение травматизма на своем производстве.
+        <br>Продажа рабочих перчаток, рабочей одежды, рабочей обуви, ветошь, средства индивидуальной защиты осуществляется
+        во все регионы России.
+        <br>Постоянно развиваясь, мы заинтересованы в новых партнёрах для перспективного
+          сотрудничества. Также у нас Вы сможете купить униформу для службы охраны и служб быта, одежду для медицинского
+          персонала.
+        <br>Кроме этого у нас Вы можете заказать услугу по индивидуальному пошиву рабочей одежды по индивидуальным меркам
+          с нанесением логотипа компании заказчика.
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sale">
+  <div class="container">
+    <div class="sale-text">
+      <div class="sale-text-title">
+        Торопитесь, скидка 10% до конца месяца!
+      </div>
+      <div class="sale-text-description">
+      </div>
+<!--      <button class="button">Подробнее</button>-->
+    </div>
+  </div>
+</section>
+
+<section class="reviews" id="reviews">
+  <div class="container">
+    <div class="reviews-title">Отзывы</div>
+    <div class="reviews-carousel">
+
+      <owl-carousel-o [options]="customOptionsReviews" #owlCarRev>
+        <ng-template carouselSlide *ngFor="let review of reviews">
+          <div class="reviews-item">
+            <div class="reviews-item-head">
+              <div class="reviews-item-image"
+                   style="background-image: url('assets/images/reviews/{{review.image}}')"></div>
+              <div class="reviews-item-name">
+                {{review.name}}
+              </div>
+            </div>
+            <div class="reviews-item-text">
+              {{review.text}}
+            </div>
+          </div>
+        </ng-template>
+      </owl-carousel-o>
+      <div class="reviews-arrows">
+        <a class="move-backward" (click)="owlCarRev.prev()">
+          <svg width="22" height="22" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M10.5551 15C10.4003 15 10.2455 14.9435 10.1233 14.8224L4.81172 9.55746C3.94818 8.70151 3.94818 7.29647 4.81172 6.44052L10.1233 1.17563C10.3596 0.941456 10.7506 0.941456 10.9869 1.17563C11.2231 1.40981 11.2231 1.7974 10.9869 2.03158L5.67526 7.29647C5.28423 7.68407 5.28423 8.31392 5.67526 8.70151L10.9869 13.9664C11.2231 14.2006 11.2231 14.5882 10.9869 14.8224C10.8647 14.9354 10.7099 15 10.5551 15Z"
+              fill="#202B21"/>
+          </svg>
+        </a>
+        <a class="move-forward" (click)="owlCarRev.next()">
+          <svg width="22" height="22" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M5.44392 1C5.59871 1 5.75349 1.05652 5.87569 1.17765L11.1873 6.44254C12.0508 7.29849 12.0508 8.70353 11.1873 9.55948L5.87569 14.8244C5.63944 15.0585 5.2484 15.0585 5.01215 14.8244C4.7759 14.5902 4.7759 14.2026 5.01215 13.9684L10.3238 8.70353C10.7148 8.31593 10.7148 7.68608 10.3238 7.29849L5.01215 2.0336C4.7759 1.79942 4.7759 1.41182 5.01215 1.17765C5.13435 1.0646 5.28914 1 5.44392 1Z"
+              fill="#202B21"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

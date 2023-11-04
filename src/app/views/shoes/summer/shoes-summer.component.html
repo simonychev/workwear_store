@@ -1,0 +1,17 @@
+<section class="shoes">
+  <div class="container">
+    <div class="main-head">
+      <span routerLink="/">Главная</span> / <span routerLink="/shoes">Спецобувь </span> / Спецобувь летняя
+    </div>
+    <h1>Спецобувь летняя</h1>
+    <div class="shoes-item">
+      <catalog *ngFor="let workwear of shoes[page].content" [catalog]="workwear"></catalog>
+    </div>
+    <div class="pages">
+      <a class="page" (click)="openPage(page)"
+         [class.active]="this.activeParams ? this.activeParams === page : (page === 1)"
+         *ngFor="let page of pages">{{page}}</a>
+    </div>
+  </div>
+</section>
+
